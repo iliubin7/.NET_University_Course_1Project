@@ -28,6 +28,10 @@ namespace Lab1_NET
 
         public void Solution()
         {
+            if (capacity == 0)
+            {
+                wOpt = -1;
+            }
             for (int k = 0; k < itemList.Count; k++)
             {
                 weight += itemList[k].weight;
