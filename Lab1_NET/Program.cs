@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("UnitTestProject")]
+[assembly: InternalsVisibleTo("WindowsFormsApp")]
 
 namespace Lab1_NET
 {
