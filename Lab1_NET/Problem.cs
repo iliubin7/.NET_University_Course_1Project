@@ -11,8 +11,8 @@ namespace Lab1_NET
         public int capacity;         //dopuszczalna ladownosc plecaka
         public int weight;           //waga bieżącego zestawu
         public int value;            //wartość bieżąecego zestawu
-        public int wOpt;             //waga optymalnego zestawu
-        public int vOpt;             //wartość optymalnego zestawu
+        public int wOpt;             //waga przedmiotów w plecaku 
+        public int vOpt;             //wartość przedmiotów w plecaku 
 
         public Problem(int cap, Knapsack knapsack)
         {
@@ -26,11 +26,13 @@ namespace Lab1_NET
             Solution();
         }
 
+        //Metoda zachłanna (nieoptymalna)
         public void Solution()
         {
             if (capacity == 0)
             {
                 wOpt = -1;
+                vOpt = -1;
             }
             for (int k = 0; k < itemList.Count; k++)
             {
@@ -65,8 +67,8 @@ namespace Lab1_NET
                     s += "    " + i + "\n";
             }
             s += "-------------------------------------------------- \n";
-            s += "Optymalna waga przedmiotów w plecaku: " + wOpt + "\n";
-            s += "Optymalna wartość przedmiotów w plecaku: " + vOpt + "\n";
+            s += "Waga przedmiotów w plecaku: " + wOpt + "\n";
+            s += "Wartość przedmiotów w plecaku: " + vOpt + "\n";
             return s;
         }
     }
